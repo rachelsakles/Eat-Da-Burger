@@ -1,0 +1,39 @@
+
+body { 
+    font-size: 25px;  
+    background-image: url(/assets/img/burger.png); 
+    background-size: contain;
+
+} 
+
+h1 { 
+    font-weight: bold;
+}
+
+.col { 
+    text-align: center;
+} 
+
+#newBurger { 
+    background-color: black; 
+    color: white;
+} 
+
+.list-group-item { 
+    color: white; 
+} 
+
+
+#freshBurg { 
+    background-color: black;
+} 
+
+#devBurg { 
+    background-color: black;
+} 
+
+h3 { 
+    font-size: 40px;
+}
+ 
+

@@ -2,9 +2,9 @@
   "name": "Eat-Da-Burger",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js", 
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -16,10 +16,13 @@
   "bugs": {
     "url": "https://github.com/rachelsakles/Eat-Da-Burger/issues"
   },
-  "homepage": "https://github.com/rachelsakles/Eat-Da-Burger#readme", 
+  "homepage": "https://github.com/rachelsakles/Eat-Da-Burger#readme",
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
     "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }

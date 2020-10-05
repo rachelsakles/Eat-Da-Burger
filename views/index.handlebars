@@ -1,0 +1,40 @@
+<div class="row"> 
+  <div class="col"> 
+  <h1>Eat-Da-Burger!</h1>
+  </div>
+</div>
+<div class="container" id="burgerContainer">
+  <div class="row">
+    <div class="col">
+      <h3>Fresh Burgers!</h3>
+      <ul class="list-group">
+        {{#each burgers}}
+        {{#unless devoured}}
+        <li class="list-group-item" id="freshBurg">{{id}}. {{burger_name}} <button class="btn btn-md btn-danger devBtn"
+            data-id="{{id}}">Devour</button></li>
+        {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+    <div class="col">
+      <h3>Devoured Burgers</h3>
+      <ul class="list-group">
+        {{#each burgers}}
+        {{#if devoured}}
+        <li class="list-group-item" id="devBurg">{{id}}. {{burger_name}}</li>
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-md-6 offset-md-3">
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholer="New Burger" aria-label="New Burger" id="newBurger">
+        <div class="input-group-append">
+          <button class="btn btn-warning" type="button" id="addBurger">Make New Burger</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -4,8 +4,8 @@ const express = require("express");
 
 const orm = {
     selectAll: function(table, cb) {
-        const query = "SELECT * FROM ?? WHERE ?? = ?";
-        connection.query(query, [table, col, val], function(err,res){
+        const query = "SELECT * FROM ??";
+        connection.query(query, [table], function(err,res){
             if (err) throw err;
             console.log(res);
             cb(res);
@@ -19,15 +19,15 @@ const orm = {
             cb(res);
         })
     },
-    updateOne: function(table, colVals, condition, cb) {
-        const query = "UPDATE ?? SET ?? =? WHERE ?? = ? "; 
-        connection.query(query, [table, colVals, condition], function(err,res){ 
+    updateOne: function(table, devouredCol, devouredVal, colId, valId, cb) {
+        const query = "UPDATE ?? SET ?? = ? WHERE ?? = ? "; 
+        connection.query(query, [table, devouredCol, devouredVal, colId, valId], function(err,res){ 
             if (err) throw err; 
             console.log(res); 
             cb(res);
         })
         
-    }
-}
+    },
+};
 
 module.exports = orm;
